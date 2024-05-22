@@ -12,7 +12,6 @@ import com.example.studentsspring.service.service_interface.IStudentService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.nio.channels.NotYetBoundException;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -45,7 +44,7 @@ public class StudentService implements IStudentService {
     public void edit(EditStudentRequest request) throws NotFoundServiceException {
         Student student = studentRepository.findById(request.getId())
                 .orElseThrow(() -> new NotFoundServiceException("Student not found"));
-        StudentGroup studentGroup = studentGroupRepository.findById(request.getId())
+        StudentGroup studentGroup = studentGroupRepository.findById(request.getGroupId())
                 .orElseThrow(() -> new NotFoundServiceException("Group not found"));
         student.setFirstName(request.getFirstName());
         student.setLastName(request.getLastName());
