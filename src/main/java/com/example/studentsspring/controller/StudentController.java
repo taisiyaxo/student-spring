@@ -39,7 +39,7 @@ public class StudentController {
         return service.getById(getStudentByIdRequest);
     }
 
-    @GetMapping("getStudentsByGroup")
+    @GetMapping("/getStudentsByGroup")
     public List<GetStudentByIdResponse> getStudentsGroupById( @RequestBody GetStudentsByGroupIdRequest request) throws NotFoundServiceException{
         return service.getByGroupId(request);
     }
