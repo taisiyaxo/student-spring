@@ -13,4 +13,12 @@ public class StudentGroup {
     private Long id;
     @Column(name="name", nullable = false, unique = true)
     private String name;
+
+    public StudentGroup() {
+    }
+
+    public StudentGroup(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 }

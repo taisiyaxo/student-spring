@@ -2,8 +2,7 @@ package com.example.studentsspring.controller;
 
 import com.example.studentsspring.exception.service_exception.NotFoundServiceException;
 import com.example.studentsspring.request.student_request.*;
-import com.example.studentsspring.response.student_response.AddStudentResponse;
-import com.example.studentsspring.response.student_response.GetStudentByIdResponse;
+import com.example.studentsspring.response.student_response.*;
 import com.example.studentsspring.service.service_interface.IStudentService;
 import lombok.AllArgsConstructor;
 import org.springframework.validation.annotation.Validated;
