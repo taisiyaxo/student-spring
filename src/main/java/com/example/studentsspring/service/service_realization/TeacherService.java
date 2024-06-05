@@ -12,6 +12,7 @@ import com.example.studentsspring.response.teacher_response.AddTeacherResponse;
 import com.example.studentsspring.response.teacher_response.GetTeacherByIdResponse;
 import com.example.studentsspring.service.service_interface.ITeacherService;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,6 +20,7 @@ import java.util.List;
 @Service
 @AllArgsConstructor
 public class TeacherService implements ITeacherService {
+    @Autowired
     private final ITeacherRepository teacherRepository;
 
 

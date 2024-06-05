@@ -1,11 +1,15 @@
 package com.example.studentsspring.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Entity
 @Table(name = "student_group")
+@AllArgsConstructor
+@NoArgsConstructor
 public class StudentGroup {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -13,12 +17,4 @@ public class StudentGroup {
     private Long id;
     @Column(name="name", nullable = false, unique = true)
     private String name;
-
-    public StudentGroup() {
-    }
-
-    public StudentGroup(Long id, String name) {
-        this.id = id;
-        this.name = name;
-    }
 }

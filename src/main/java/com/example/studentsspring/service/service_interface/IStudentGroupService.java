@@ -22,4 +22,5 @@ public interface IStudentGroupService {
 
     GetStudentGroupByIdResponse getById(GetStudentGroupByIdRequest request) throws NotFoundServiceException;
 
+
 }

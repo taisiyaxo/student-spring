@@ -2,9 +2,11 @@ package com.example.studentsspring.response.subject_response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class AddSubjectResponse {
-    public final Long id;
+    private Long id;
 }

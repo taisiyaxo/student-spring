@@ -1,11 +1,15 @@
 package com.example.studentsspring.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Entity
 @Table(name = "student")
+@AllArgsConstructor
+@NoArgsConstructor
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -23,4 +27,7 @@ public class Student {
     @ManyToOne
     @JoinColumn(name = "student_group_id", referencedColumnName = "id")
     private StudentGroup group;
+
+    public Student(String o, Object o1, Object o2, Object o3, Object o4, Object o5) {
+    }
 }

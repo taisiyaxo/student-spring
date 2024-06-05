@@ -1,28 +1,24 @@
 package com.example.studentsspring.service.service_realization;
 
 import com.example.studentsspring.entity.StudentGroup;
-import com.example.studentsspring.exception.service_exception.NotFoundServiceException;
-import com.example.studentsspring.exception.service_exception.ServiceException;
+import com.example.studentsspring.exception.service_exception.*;
 import com.example.studentsspring.repository.IStudentGroupRepository;
 import com.example.studentsspring.repository.IStudentRepository;
-import com.example.studentsspring.request.student_group_request.AddStudentGroupRequest;
-import com.example.studentsspring.request.student_group_request.DeleteStudentGroupRequest;
-import com.example.studentsspring.request.student_group_request.EditStudentGroupRequest;
-import com.example.studentsspring.request.student_group_request.GetStudentGroupByIdRequest;
-import com.example.studentsspring.request.student_request.EditStudentRequest;
-import com.example.studentsspring.request.student_request.GetStudentByIdRequest;
-import com.example.studentsspring.response.student_group_response.AddStudentGroupResponse;
-import com.example.studentsspring.response.student_group_response.GetStudentGroupByIdResponse;
+import com.example.studentsspring.request.student_group_request.*;
+import com.example.studentsspring.response.student_group_response.*;
 import com.example.studentsspring.service.service_interface.IStudentGroupService;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 
 @Service
 @AllArgsConstructor
 
 public class StudentGroupService implements IStudentGroupService {
-
+    @Autowired
     private final IStudentGroupRepository groupRepository;
+    @Autowired
     private final IStudentRepository studentRepository;
 
     @Override

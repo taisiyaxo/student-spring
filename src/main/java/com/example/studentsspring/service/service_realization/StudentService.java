@@ -10,6 +10,7 @@ import com.example.studentsspring.response.student_response.AddStudentResponse;
 import com.example.studentsspring.response.student_response.GetStudentByIdResponse;
 import com.example.studentsspring.service.service_interface.IStudentService;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,8 +19,9 @@ import java.util.stream.Collectors;
 @Service
 @AllArgsConstructor
 public class StudentService implements IStudentService {
-
+    @Autowired
     private final IStudentRepository studentRepository;
+    @Autowired
     private final IStudentGroupRepository studentGroupRepository;
 
     @Override

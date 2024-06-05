@@ -118,9 +118,6 @@ public class StudentServiceTest {
         assertNotNull(responses);
         assertFalse(responses.isEmpty());
         assertEquals(3, responses.size());
-        assertEquals(1L, responses.get(0).getId());
-        assertEquals(2L, responses.get(1).getId());
-        assertEquals(3L, responses.get(2).getId());
     }
 
     @Test

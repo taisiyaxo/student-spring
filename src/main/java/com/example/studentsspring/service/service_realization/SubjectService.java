@@ -11,15 +11,15 @@ import com.example.studentsspring.response.subject_response.AddSubjectResponse;
 import com.example.studentsspring.response.subject_response.GetSubjectByIdResponse;
 import com.example.studentsspring.service.service_interface.ISubjectService;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service
 @AllArgsConstructor
 public class SubjectService implements ISubjectService {
-
+    @Autowired
     private ISubjectRepository subjectRepository;
-
 
     @Override
     public AddSubjectResponse add(AddSubjectRequest addSubjectRequest) throws NotFoundServiceException {
